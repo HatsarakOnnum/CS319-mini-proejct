@@ -1,0 +1,326 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anuphan";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anuphan', sans-serif;
+    background-color: #FFF0D1;
+}
+.navbar{
+    background-color: #3B3030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 10;
+    z-index: 1000000;
+}
+.navbar-left i{
+    font-size: 4vh;
+    color: #fff;
+    padding-left: 30px;
+
+}
+.navbar-center a img{
+    width: 25vh;
+
+}
+.navbar-right a {
+    font-size: 1.5vh; /* ขนาดตัวอักษร */
+    color: #fff; /* สีตัวอักษร */
+    text-decoration: none; /* ไม่มีเส้นขีดใต้ */
+    margin-right: 50px; /* ระยะห่างจากขอบขวา */
+    padding: 5px 20px; /* ขอบในของปุ่ม */
+    border: solid 2px #fff; /* ขอบปุ่มเป็นสีขาว */
+    border-radius: 20px; /* ทำมุมขอบโค้งมน */
+    text-align: center; /* จัดเรียงข้อความให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่มแอนิเมชันเมื่อโฮเวอร์ */
+}
+
+.navbar-right a:hover {
+    background-color: #fff; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    color: #8967B3; /* เปลี่ยนสีตัวอักษรเมื่อโฮเวอร์ */
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.box{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden; 
+}
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg ,transparent,
+    transparent ,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg ,transparent,
+    transparent ,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderline{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.borderline::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg ,transparent,
+    transparent ,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderline::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(0deg ,transparent,
+    transparent ,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.box form{
+    position: absolute;
+    inset:  4px;
+    background-color: #3B3030;
+    padding: 50px 50px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.box form h1{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+.box form .inputbox{
+    position: relative;
+    width: 500px;
+
+}
+.box form .inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 60px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+.box form .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+.box form .inputbox input:valid ~ span,
+.box form .inputbox input:focus ~ span
+{
+    color: #fff;
+    font-size: 20px;
+    transform: translateY(-20px);
+}
+.box form .inputbox i{
+    position: absolute;
+    left: 0;
+    top: 60;
+    width: 600px;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+    
+}
+.box form .inputbox input:valid ~ i,
+.box form .inputbox input:focus ~ i
+{
+    height: 40px;
+}
+.box form .links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box form .links a{
+    margin:30px 0;
+    font-size: 15px;
+    color : #8f8f8f;
+    padding-right: 10px;
+    text-decoration: none;
+}
+.box form .links a:hover,
+.box form .links a:nth-child(2)
+{
+    color: #fff;
+}
+
+.box form .loginsubmit input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding: 9px 30px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 150px;
+    margin-left: 50px;
+}
+.box form .loginsubmit input[type="submit"]:active
+{
+    opacity: 0.8;
+}
+.btn {
+    display: flex;
+    margin-top: 30px;
+}
+
+.box form .backsubmit a
+{
+    border: none;
+    outline: none;
+    padding: 9px 70px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 150px;
+    margin-left: 120px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 600px) {
+    .box{
+        position: relative;
+        width: 100%;
+        max-width: 700px;
+        background: #1c1c1c;
+        border-radius: 8px;
+        overflow: hidden; 
+    }
+    
+
+    .box form {
+        padding: 30px;
+    }
+
+    .inputbox input {
+        padding: 15px 10px 10px;
+        font-size: 20px;
+    }
+
+    .box form h1 {
+        font-size: 30px;
+    }
+
+    .box form .loginsubmit input[type="submit"],
+    .box form .backsubmit a {
+        padding: 9px 40px;
+        font-size: 20px;
+        width: 150px;
+        margin-left: 0;
+    }
+
+    .header {
+        flex-direction: row;
+    }
+
+    .header-left h1 {
+        font-size: 40px; 
+        margin-bottom: 0; 
+    }
+
+    .header-left a {
+        font-size: 20px;
+        padding: 0 2rem;
+    }
+
+    .usericon i {
+        font-size: 30px;
+    }
+
+    .usericon a {
+        font-size: 25px;
+    }
+}

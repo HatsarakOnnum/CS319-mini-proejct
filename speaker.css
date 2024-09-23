@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anuphan";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anuphan', sans-serif;
+    background-color: #fff;
+}
+.navbars{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+}
+.navbar-left i{
+    font-size: 4vh;
+    color: #fff;
+    padding-left: 30px;
+
+}
+
+.navbars-center a img{
+    width: 25vh;
+}
+.navbars-right a {
+    font-size: 1.5vh; /* ขนาดตัวอักษร */
+    color: #fff; /* สีตัวอักษร */
+    text-decoration: none; /* ไม่มีเส้นขีดใต้ */
+    margin-right: 50px; /* ระยะห่างจากขอบขวา */
+    padding: 5px 20px; /* ขอบในของปุ่ม */
+    border: solid 2px #fff; /* ขอบปุ่มเป็นสีขาว */
+    border-radius: 20px; /* ทำมุมขอบโค้งมน */
+    text-align: center; /* จัดเรียงข้อความให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่มแอนิเมชันเมื่อโฮเวอร์ */
+}
+
+.navbars-right a:hover {
+    background-color: #fff; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    color: #8967B3; /* เปลี่ยนสีตัวอักษรเมื่อโฮเวอร์ */
+}
+
+.container1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.container1 img{
+    width: 50vh;
+}
+.container1-left {
+    font-size: 1.7vh;
+    margin: 3vh;
+    display: flex; /* เปลี่ยนจาก grid เป็น flex */
+    flex-direction: column; /* จัดให้อยู่ในแนวตั้ง */
+    justify-content: center; /* จัดตรงกลางในแนวตั้ง */
+    align-items: center; /* จัดตรงกลางในแนวนอน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+
+.container1-right{
+    line-height: 5vh;
+    display: flex; /* เปลี่ยนจาก grid เป็น flex */
+    flex-direction: column; /* จัดให้อยู่ในแนวตั้ง */
+    justify-content: center; /* จัดตรงกลางในแนวตั้ง */
+    align-items: center; /* จัดตรงกลางในแนวนอน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+.container2{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+.container2 img{
+    width: 50vh;
+}
+.top h1{
+    font-size: 5vh;
+    margin: 5vh;
+}
+
+@media screen and (max-width: 768px){
+    .container1{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+}

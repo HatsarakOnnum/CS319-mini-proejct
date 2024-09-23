@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anuphan";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anuphan', sans-serif;
+    background-color: #fff;
+}
+.navbars{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    margin-bottom: 100px;
+}
+.navbar-left i{
+    font-size: 4vh;
+    color: #fff;
+    padding-left: 30px;
+
+}
+
+.navbars-center a img{
+    width: 25vh;
+}
+.navbars-right a {
+    font-size: 1.5vh; /* ขนาดตัวอักษร */
+    color: #fff; /* สีตัวอักษร */
+    text-decoration: none; /* ไม่มีเส้นขีดใต้ */
+    margin-right: 50px; /* ระยะห่างจากขอบขวา */
+    padding: 5px 20px; /* ขอบในของปุ่ม */
+    border: solid 2px #fff; /* ขอบปุ่มเป็นสีขาว */
+    border-radius: 20px; /* ทำมุมขอบโค้งมน */
+    text-align: center; /* จัดเรียงข้อความให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้อยู่กลางในแนวตั้ง */
+    transition: background-color 0.3s ease, color 0.3s ease; /* เพิ่มแอนิเมชันเมื่อโฮเวอร์ */
+}
+
+.navbars-right a:hover {
+    background-color: #fff; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์ */
+    color: #8967B3; /* เปลี่ยนสีตัวอักษรเมื่อโฮเวอร์ */
+}
+
+
+.col-md-5 img{
+    width: 60vh;
+}
+
+main{
+    margin: 30px;
+}
+.row h2{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
